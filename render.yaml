@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: your-backend-name
+    env: rust
+    plan: free
+    buildCommand: "cargo build --release"
+    startCommand: "./target/release/your_backend_binary"
+    envVars:
+      - key: DATABASE_URL
+        value: "classmate.db"
